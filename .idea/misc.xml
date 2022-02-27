@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_broken_image.xml" value="0.1385" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_connection_error.xml" value="0.1385" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/loading_animation.xml" value="0.1385" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/loading_img.xml" value="0.1385" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/next_button.xml" value="0.1385" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/round_outline.xml" value="0.1385" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/layout/activity_splash.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_news.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_news_detail.xml" value="0.22447916666666667" />
         <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/layout/fragment_splash.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/murat/AndroidStudioProjects/NewsApp/app/src/main/res/layout/item_home_list.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>

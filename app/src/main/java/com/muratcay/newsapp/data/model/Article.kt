@@ -1,6 +1,5 @@
 package com.muratcay.newsapp.data.model
 
-
 import com.google.gson.annotations.SerializedName
 
 data class Article(

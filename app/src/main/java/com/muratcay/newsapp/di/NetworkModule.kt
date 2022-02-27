@@ -1,5 +1,6 @@
 package com.muratcay.newsapp.di
 
+import com.muratcay.newsapp.data.model.Article
 import com.muratcay.newsapp.data.remote.service.NewsService
 import com.muratcay.newsapp.utils.Constants.BASE_URL
 import dagger.Module
