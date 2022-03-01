@@ -17,19 +17,24 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/blue_grey_light_900"
         tools:context=".ui.home.NewsFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:listData="@{viewModel.article}"
+            android:layout_width="@dimen/size_0"
+            android:layout_height="@dimen/size_0"
+            android:clipToPadding="false"
             android:orientation="vertical"
+            android:paddingTop="@dimen/padding_8"
+            android:paddingBottom="@dimen/padding_32"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:listData="@{viewModel.article}"
+            tools:listitem="@layout/item_home_list" />
 
         <ImageView
             android:id="@+id/imgStatus"
@@ -40,7 +45,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:status="@{viewModel.status}" />
+            app:status="@{viewModel.status}"
+            android:contentDescription="@string/todo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

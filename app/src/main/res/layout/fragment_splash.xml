@@ -20,7 +20,7 @@
             android:layout_marginStart="@dimen/margin_32"
             android:layout_marginTop="@dimen/margin_48"
             android:layout_marginEnd="@dimen/margin_32"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:text="@string/welcome"
             android:textColor="@color/red_primary_A700"
             android:textSize="@dimen/splash_text_size"
@@ -35,11 +35,10 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
             app:lottie_autoPlay="true"
-            app:lottie_loop="true"
+            app:lottie_loop="false"
             app:lottie_rawRes="@raw/news_animation_gif" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -52,7 +51,7 @@
             android:background="@drawable/next_button"
             android:text="@string/news"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/red_primary_A700"
             android:textSize="@dimen/splash_button_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

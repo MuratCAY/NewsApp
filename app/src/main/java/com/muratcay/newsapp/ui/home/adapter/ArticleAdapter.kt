@@ -10,12 +10,15 @@ import com.muratcay.newsapp.databinding.ItemHomeListBinding
 
 class ArticleAdapter : ListAdapter<Article, ArticleAdapter.ArticleViewHolder>(ArticleDiffCallback) {
 
+    var onClick: (Article) -> Unit = {}
+
     class ArticleViewHolder(private val binding: ItemHomeListBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(article: Article) {
+        fun bind(article: Article, onClick: (Article) -> Unit = {}) {
             binding.articleModel = article
             binding.newsImageView.clipToOutline = true
             binding.executePendingBindings()
+            binding.root.setOnClickListener { onClick(article) }
         }
     }
 
@@ -30,13 +33,13 @@ class ArticleAdapter : ListAdapter<Article, ArticleAdapter.ArticleViewHolder>(Ar
     }
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position),onClick)
     }
 }
 
 object ArticleDiffCallback : DiffUtil.ItemCallback<Article>() {
     override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
-        return oldItem.source.id == newItem.source.id
+        return oldItem.id == newItem.id
     }
 
     override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {

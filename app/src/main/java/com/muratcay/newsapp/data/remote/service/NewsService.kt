@@ -9,7 +9,8 @@ interface NewsService {
 
     @GET("top-headlines")
     suspend fun getTopHeadlines(
-        @Query("country") country: String = "tr",
+        @Query("country") country: String = "US",
         @Query("apiKey") apiKey: String = api_key
     ): ArticlesResponse
+
 }

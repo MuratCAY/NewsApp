@@ -1,9 +1,9 @@
 package com.muratcay.newsapp.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.muratcay.newsapp.R
 import com.muratcay.newsapp.databinding.FragmentNewsBinding
 import com.muratcay.newsapp.ui.base.BaseFragment
@@ -21,7 +21,30 @@ class NewsFragment : BaseFragment<FragmentNewsBinding>() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
+        configureRecycler()
+        navigateSelectedArticle()
+    }
+
+    private fun configureRecycler() {
         binding.recyclerView.adapter = articlesAdapter
+    }
+
+    private fun navigateSelectedArticle() {
+
+        articlesAdapter.onClick = {
+            viewModel.displayArticleDetails(it)
+        }
+
+        viewModel.navigateSelectedArticle.observe(viewLifecycleOwner) { articleModel ->
+            articleModel?.let {
+                findNavController().navigate(
+                    NewsFragmentDirections.actionNewsFragmentToNewsDetailFragment(
+                        it
+                    )
+                )
+                viewModel.displayArticleDetailComplete()
+            }
+        }
     }
 
     override fun getFragmentView() = R.layout.fragment_news

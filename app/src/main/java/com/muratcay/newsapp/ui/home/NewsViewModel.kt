@@ -23,6 +23,10 @@ class NewsViewModel
     val article: LiveData<List<Article>>
         get() = mutableArticle
 
+    private val mutableNavigateSelectedArticle: MutableLiveData<Article?> = MutableLiveData()
+    val navigateSelectedArticle: LiveData<Article?>
+        get() = mutableNavigateSelectedArticle
+
     init {
         getArticles()
     }
@@ -40,4 +44,11 @@ class NewsViewModel
         }
     }
 
+    fun displayArticleDetails(article: Article?) {
+        mutableNavigateSelectedArticle.value = article
+    }
+
+    fun displayArticleDetailComplete() {
+        mutableNavigateSelectedArticle.value = null
+    }
 }

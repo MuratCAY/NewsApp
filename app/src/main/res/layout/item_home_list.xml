@@ -16,12 +16,13 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        app:cardElevation="8dp">
+        android:layout_height="@dimen/home_card_height"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_4"
+        app:cardCornerRadius="@dimen/home_card_radius"
+        app:cardElevation="@dimen/home_card_elevation">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -29,13 +30,13 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/newsImageView"
-                android:layout_width="88dp"
-                android:layout_height="88dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_4"
+                android:adjustViewBounds="true"
                 android:background="@drawable/round_outline"
                 android:clipToOutline="true"
-                android:layout_margin="10dp"
                 android:scaleType="centerCrop"
-                android:adjustViewBounds="true"
                 app:imageUrl="@{articleModel.urlToImage}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,21 +45,24 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/text"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/size_0"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginEnd="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:padding="@dimen/padding_4"
+                android:background="@color/home_text_background"
+                android:inputType="textMultiLine"
+                android:gravity="center_horizontal"
                 android:text="@{articleModel.title}"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/newsImageView"
-                app:layout_constraintStart_toEndOf="@id/newsImageView"
+                android:textColor="@color/red_light_700"
+                android:textSize="@dimen/home_title_text_size"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/newsImageView"
+                app:layout_constraintEnd_toEndOf="@id/newsImageView"
+                app:layout_constraintStart_toStartOf="@id/newsImageView"
                 tools:text="My Text" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
 </layout>

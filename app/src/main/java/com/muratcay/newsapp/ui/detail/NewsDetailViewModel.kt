@@ -7,6 +7,4 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NewsDetailViewModel
-@Inject constructor(private val repository: NewsRepository) : ViewModel() {
-
-}
+@Inject constructor(private val repository: NewsRepository) : ViewModel()

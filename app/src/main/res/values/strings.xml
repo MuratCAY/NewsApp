@@ -2,6 +2,7 @@
     <string name="app_name">NewsApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="welcome">Hoşgeldiniz \n En güncel haberleri almak için takipte kalın!</string>
-    <string name="news">Haberler</string>
+    <string name="welcome">Welcome, Stay tuned to get the latest news!</string>
+    <string name="news">News</string>
+    <string name="todo">TODO</string>
 </resources>

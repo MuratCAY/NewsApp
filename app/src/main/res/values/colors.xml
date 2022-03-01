@@ -22,6 +22,8 @@
     <color name="red_dark_A700">#9b0000</color>
     <color name="red_light_A700">#ff5131</color>
 
+    <color name="home_text_background">#993E3E3E</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
