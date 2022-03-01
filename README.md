@@ -7,7 +7,6 @@
    <a=href="https://github.com/Back-to-Life/BackToLife-Mobile/blob/master/LICENSE">
    <img src="https://img.shields.io/badge/license-MIT-blue.svg">   <a=href="https://github.com/Back-to-Life/BackToLife-Mobile/blob/master/LICENSE">
    <img src="https://img.shields.io/badge/version-1.0.0-blue.svg">
-   <a=href="https://github.com/fatihkurcenli/SunCoinMarket/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc">
    <img src="https://img.shields.io/badge/PRs-Welcome-blue.svg">
 </p>
      
